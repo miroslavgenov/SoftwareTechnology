@@ -1,12 +1,10 @@
-// Agent sample_agent in project groceryShoppingAndHomeItemArrangingAgent
+// Agent grocery_shop_cashier_agent in project groceryShoppingAndHomeItemArrangingAgent
 
 /* Initial beliefs and rules */
 
 /* Rules */
 
 /* Initial goals */
-
-
 
 /* Beliefs addition */
 

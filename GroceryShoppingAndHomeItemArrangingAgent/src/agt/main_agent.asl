@@ -1,4 +1,6 @@
-// Agent sample_agent in project groceryShoppingAndHomeItemArrangingAgent
+// Agent main_agent in project groceryShoppingAndHomeItemArrangingAgent
+
+//TODO: can get msg from owner if place item list, can get money, 
 
 /* Initial beliefs and rules */
 
