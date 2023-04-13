@@ -14,7 +14,11 @@
 
 mas groceryShoppingAndHomeItemArrangingAgent {
 
-    agent sample_agent
+    agent main_agent: main_agent.asl
+
+    agent owner_agent: owner_agent.asl
+
+    agent grocery_shop_cashier_agent: grocery_shop_cashier_agent.asl
 
     
 
