@@ -9,11 +9,11 @@
 /* Beliefs addition */
 
 
-!start.
+// !start.
 
 /* Plans */
 
-+!start : true <- .print("hello world.").
+// +!start : true <- .print("hello world.").
 
 { include("$jacamoJar/templates/common-cartago.asl") }
 { include("$jacamoJar/templates/common-moise.asl") }

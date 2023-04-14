@@ -4,16 +4,15 @@
 
 /* Rules */
 
-/* Initial goals */
 
 /* Beliefs addition */
 
-
+/* Initial goals */
 !start.
 
 /* Plans */
 
-+!start : true <- .print("hello world.").
++!start : true <- .send(main_agent,tell,hello("Hello")).
 
 { include("$jacamoJar/templates/common-cartago.asl") }
 { include("$jacamoJar/templates/common-moise.asl") }

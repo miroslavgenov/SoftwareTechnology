@@ -3,21 +3,25 @@
 //TODO: can get msg from owner if place item list, can get money, 
 
 /* Initial beliefs and rules */
+coordinates(home,[X,Y,Z]).
+coordinates(shop,[X,Y,Z]).
+coordinates(robot,[1,2,3]).
+proper_coordinates_of(items).
 
 /* Rules */
 
-/* Initial goals */
-
-
-
 /* Beliefs addition */
 
-
-!start.
+/* Initial goals */
+!arrange_room_items.
+!arrange_item.
 
 /* Plans */
++!arrange_room_items: not see(owner) <- .print("helo").
 
-+!start : true <- .print("hello world.").
+// +!arrange_item: 
+
+
 
 { include("$jacamoJar/templates/common-cartago.asl") }
 { include("$jacamoJar/templates/common-moise.asl") }
