@@ -22,8 +22,8 @@ correct_coordinates(item,xyz).
 !arrange_item.
 
 /* Plans */
-//TODO remove not
-+!arrange_item: not see(human) & not see_incorectly_placed(item)
+//TODO create external action that prints Items must be arranged , etc ...
++!arrange_item: not see(human) & see_incorectly_placed(item)
     <- .print("Items must be arranged");
     ?coordinates(item,IncorrectlyPlacedCoordinate);
     go(IncorrectlyPlacedCoordinate);
