@@ -14,13 +14,17 @@
 
 mas groceryShoppingAndHomeItemArrangingAgent {
 
-    agent main_agent: main_agent.asl
+    agent main_agent: main_agent.asl{
+        join: homeRoomAndGrocery
+    }
 
     agent owner_agent: owner_agent.asl
 
     agent grocery_shop_cashier_agent: grocery_shop_cashier_agent.asl
 
-    
+    workspace homeRoomAndGrocery{
+        artifact store: tools.RoomAndGrocery
+    }    
 
 }
 
