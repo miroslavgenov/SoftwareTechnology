@@ -13,11 +13,13 @@ proper_coordinates_of(items).
 /* Beliefs addition */
 
 /* Initial goals */
-!arrange_room_items.
-!arrange_item.
+!start.
+// !arrange_room_items.
+// !arrange_item.
 
 /* Plans */
-+!arrange_room_items: not see(owner) <- .print("helo").
++!start: true <- mylib.check(X); .print(X).
+// +!arrange_room_items: not see(owner) <- .print("helo").
 
 // +!arrange_item: 
 

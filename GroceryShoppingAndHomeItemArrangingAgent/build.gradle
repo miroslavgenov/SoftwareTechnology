@@ -38,6 +38,7 @@ dependencies {
 sourceSets {
     main {
         java {
+            srcDir 'src/mylib'
             srcDir 'src/env'
             srcDir 'src/agt'
             srcDir 'src/org'
