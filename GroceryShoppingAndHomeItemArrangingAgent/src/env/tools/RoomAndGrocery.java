@@ -28,6 +28,16 @@ public class RoomAndGrocery extends Artifact {
     
   }
 
+  @OPERATION void get(Object coordinats){
+    
+  }
+
+  @OPERATION void write(Object coordinats){
+    
+  }
+
+
+
   @OPERATION void sayGroceryGreetingsMessage(String msg) {
     System.out.println(msg);
     // getObsProperty("groceryMsg").updateValue(msg);

@@ -18,9 +18,13 @@ mas groceryShoppingAndHomeItemArrangingAgent {
         join: homeRoomAndGrocery
     }
 
-    agent owner_agent: owner_agent.asl
+    agent owner_agent: owner_agent.asl{
+        join: homeRoomAndGrocery
+    }
 
-    agent grocery_shop_cashier_agent: grocery_shop_cashier_agent.asl
+    agent grocery_shop_cashier_agent: grocery_shop_cashier_agent.asl{
+        join: homeRoomAndGrocery
+    }
 
     workspace homeRoomAndGrocery{
         artifact store: tools.RoomAndGrocery

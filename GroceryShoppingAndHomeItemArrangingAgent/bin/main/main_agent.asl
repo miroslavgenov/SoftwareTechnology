@@ -19,35 +19,39 @@ correct_coordinates(item,xyz).
 
 
 /* Initial goals */
-!arrange_item.
+// !arrange_item.
 
 /* Plans */
-//TODO remove not
-+!arrange_item: not see(human) & not see_incorectly_placed(item)
-    <- .print("Items must be arranged");
-    ?coordinates(item,IncorrectlyPlacedCoordinate);
-    go(IncorrectlyPlacedCoordinate);
-    pick(item);
-    ?correct_coordinates(item,CorrectCoordinates);
-    go(CorrectCoordinates);
-    put(item);
-    ?coordinates(room,RoomCoordinates);
-    go(RoomCoordinates);
-    .wait(1000);
-    -+see(human);
-    -+see_incorectly_placed(item);
-    !arrange_item
-    .
+//TODO create external action that prints Items must be arranged , etc ...
+// +!arrange_item: not see(human) & see_incorectly_placed(item)
+//     <- .print("Items must be arranged");
+//     ?coordinates(item,IncorrectlyPlacedCoordinate);
+//     go(IncorrectlyPlacedCoordinate);
+//     pick(item);
+//     ?correct_coordinates(item,CorrectCoordinates);
+//     go(CorrectCoordinates);
+//     put(item);
+//     ?coordinates(room,RoomCoordinates);
+//     go(RoomCoordinates);
+//     .wait(1000);
+//     -+see(human);
+//     -+see_incorectly_placed(item);
+//     !arrange_item
+//     .
 
-+!arrange_item: see(human) & see_incorectly_placed(item)
-    <- .print("Human in room can't arrage");
-    .wait(1000);
-    -+see(human);
-    !arrange_item.
+// +!arrange_item: see(human) & see_incorectly_placed(item)
+//     <- .print("Human in room can't arrage");
+//     .wait(1000);
+//     -+see(human);
+//     !arrange_item.
 
-+!arrange_item: (not see(human) | see(human)) & not see_incorectly_placed(item)
-    <- .print("All items are in place");
-    !arrange_item.
+// +!arrange_item: (not see(human) | see(human)) & not see_incorectly_placed(item)
+//     <- .print("All items are in place");
+//     .wait(1000);
+//     !arrange_item.
+
+// +!buy[source(owner_agent)]:
+
 
 { include("$jacamoJar/templates/common-cartago.asl") }
 { include("$jacamoJar/templates/common-moise.asl") }
