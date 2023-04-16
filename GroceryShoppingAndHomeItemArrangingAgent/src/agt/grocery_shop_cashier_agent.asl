@@ -12,7 +12,7 @@ have_enought_money_to_buy(Food,Money):- mylib.calculate_food_price(Food,Price) &
 
 /* Plans */
 +!sell_food(Food,Money): have_enought_money_to_buy(Food,Money) <-
-    say("Hello client you bought the food successfully.");
+    say("Hello client. You successfully bought the food for",Money);
     .send(main_agent,tell,transaction_completed).
 
 

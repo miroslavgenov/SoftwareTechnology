@@ -84,7 +84,10 @@ grocery_open:- .time(H,M,S) & H>7 & H<21.
     open(fridge);
     ?food(Food);
     put(Food,fridge);
-    close(fridge).
+    close(fridge);
+    ?coordinates(rest,RestCoordinates);
+    go(RestCoordinates)
+    .
 
 { include("$jacamoJar/templates/common-cartago.asl") }
 { include("$jacamoJar/templates/common-moise.asl") }

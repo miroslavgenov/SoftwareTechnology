@@ -17,7 +17,7 @@ have_enought_money(Price):- money(Money) & Money>Price.
 
 
 /* Plans */
-+!pick_food: not full(fridge) <- 
++!pick_food: full(fridge) <- 
 -+food(remaining_food);
 -+see(food_magazine);
 .print("Hmmmm...");
