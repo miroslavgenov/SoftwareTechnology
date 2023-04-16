@@ -36,7 +36,9 @@ public class RoomAndGrocery extends Artifact {
     
   }
 
-
+  @OPERATION void say(String msg) {
+    System.out.println(msg);
+  }
 
   @OPERATION void sayGroceryGreetingsMessage(String msg) {
     System.out.println(msg);
