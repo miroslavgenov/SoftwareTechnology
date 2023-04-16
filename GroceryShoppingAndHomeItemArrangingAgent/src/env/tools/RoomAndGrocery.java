@@ -20,19 +20,28 @@ public class RoomAndGrocery extends Artifact {
 
   }
 
-  @OPERATION void pick(Object coordinats){
+  @OPERATION void pick(Object object){
     
   }
 
-  @OPERATION void put(Object coordinats){
+  @OPERATION void put(Object object){
     
   }
 
-  @OPERATION void get(Object coordinats){
+  @OPERATION void put(Object object1,Object object2){
     
   }
 
-  @OPERATION void write(Object coordinats){
+  @OPERATION void open(Object object){
+    
+  }
+
+  @OPERATION void close(Object object){
+    
+  }
+
+
+  @OPERATION void get(Object object){
     
   }
 
@@ -40,10 +49,8 @@ public class RoomAndGrocery extends Artifact {
     System.out.println(msg);
   }
 
-  @OPERATION void sayGroceryGreetingsMessage(String msg) {
-    System.out.println(msg);
-    // getObsProperty("groceryMsg").updateValue(msg);
+  @OPERATION void say(String msg1,String msg2) {
+    System.out.println(msg1+" "+msg2);
   }
-
 
 }

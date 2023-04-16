@@ -17,10 +17,10 @@ have_enought_money(Price):- money(Money) & Money>Price.
 
 
 /* Plans */
-+!pick_food: full(fridge) <- 
++!pick_food: not full(fridge) <- 
 -+food(remaining_food);
-.print("pick");
 -+see(food_magazine);
+.print("Hmmmm...");
 mylib.choose_food_from(food_magazine,Choosen_food);
 !order_food(Choosen_food).
 
@@ -30,6 +30,7 @@ mylib.choose_food_from(food_magazine,Choosen_food);
 ?money(Money);
 MyNewMoney = Money-Price;
 -+money(MyNewMoney);
+say("Hello Robot.I want to have ",Food);
 .send(main_agent,achieve,buy(Food,Price)).
 
 
