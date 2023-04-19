@@ -45,11 +45,6 @@ public class RoomAndGrocery extends Artifact {
     System.out.println(msg);
   }
   
-  // @OPERATION void say(String msg1,int msg2) {
-  //   System.out.println(msg1+" "+msg2);
-  // }
-
-
 
   @OPERATION void say(String msg1,Object msg2) {
     System.out.println(msg1+" "+msg2);
